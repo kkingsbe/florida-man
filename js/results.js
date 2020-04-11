@@ -1,17 +1,18 @@
 var month = localStorage.getItem("month")
 var day = localStorage.getItem("day")
-var key = "8281d9210268d55e2121e39e823fec75"
+let apiKey = "AIzaSyD95CPeV3wq0QPRM0XyPmYB8-h62BUffgs"
 console.log(`Florida Man ${month} ${day}`)
-fetch(`https://gnews.io/api/v3/search?q=florida+man+${month}&token=${key}`)
-  .then((response) => {
-    return response.json();
+
+fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=003161816120397676198:wnb8ykt3fac&q=florida man may 2`)
+  .then(response => {
+    return response.json()
   })
-  .then((data) => {
-    console.log(data);
-    for(article of data.articles) {
-      let source = article.source.name
+  .then(data => {
+    console.log(data)
+    for(article of data.items) {
+      let source = article.displayLink
       let title = article.title
-      let url = article.url
+      let url = article.link
       let card = $(`<div class='card' onclick=navigateTo('${url}')></div>`)
       let cardHeader = $(`<p class='card-header'>${source}</p>`)
       let cardBody = $(`<p class='card-body'>${title}</p>`)
