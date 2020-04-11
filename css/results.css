@@ -19,6 +19,8 @@ html, body {
 }
 .header {
   font-size: 32px;
+  width: 100%;
+  padding-left: 15px;
 }
 .card-container {
   width: 100%;
