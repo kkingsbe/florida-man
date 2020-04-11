@@ -3,7 +3,7 @@ var day = localStorage.getItem("day")
 let apiKey = "AIzaSyD95CPeV3wq0QPRM0XyPmYB8-h62BUffgs"
 console.log(`Florida Man ${month} ${day}`)
 
-fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=003161816120397676198:wnb8ykt3fac&q=florida man may 2`)
+fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=003161816120397676198:wnb8ykt3fac&q=florida man ${month} ${day}`)
   .then(response => {
     return response.json()
   })
