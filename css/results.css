@@ -38,11 +38,10 @@ html, body {
 }
 .card {
   width: 90%;
-  border: 1px solid #707070;
   overflow: hidden;
   padding-left: 7px;
   border-radius: 25px;
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
   cursor: pointer;
   margin-bottom: 25px;
 }
