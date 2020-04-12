@@ -9,17 +9,19 @@ fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=0031618161203
   })
   .then(data => {
     console.log(data)
+    let hue = 0
     for(article of data.items) {
       let source = article.displayLink
       let title = article.title
       let url = article.link
       let card = $(`<div class='card' onclick=navigateTo('${url}')></div>`)
+      $(card).css("background", `hsl(${hue},100%,87%)`)
       let cardHeader = $(`<p class='card-header'>${source}</p>`)
       let cardBody = $(`<p class='card-body'>${title}</p>`)
       card.append(cardHeader)
       card.append(cardBody)
       $(".card-container").append(card)
-
+      hue += 20
     }
   })
 

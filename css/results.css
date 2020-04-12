@@ -37,7 +37,7 @@ html, body {
   align-items: center;
 }
 .card {
-  background: #B5FFF5;
+  /*background: #B5FFF5;*/
   width: 90%;
   border: 1px solid #707070;
   overflow: hidden;
