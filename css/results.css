@@ -37,7 +37,6 @@ html, body {
   align-items: center;
 }
 .card {
-  /*background: #B5FFF5;*/
   width: 90%;
   border: 1px solid #707070;
   overflow: hidden;
@@ -48,11 +47,12 @@ html, body {
   margin-bottom: 25px;
 }
 .card-header {
-  font-size: 26px;
-  margin: 0px;
-  margin-top: 10px;
+  font-size: 24px;
+  margin: 12px 8px;
   padding-bottom: 0px;
+  font-weight: 8px;
 }
 .card-body {
-  margin-top: 10px;
+  margin: 12px 8px;
+  font-size: 0.8em;
 }
